@@ -5,6 +5,8 @@ export default function Home() {
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    //@ts-ignore
     const pasteBody = e.target.body.value
     // POST request to /api/paste
     const res = await fetch('/api/paste', {
